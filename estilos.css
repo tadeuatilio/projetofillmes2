@@ -1,0 +1,114 @@
+/* estilização do corpo da pág. */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* estilização da classe topo */
+.topo {
+  /* espaçamento dentro do elemento */
+  padding: 0px;
+  /* altura mínima do topo */
+  min-height: 110px;
+}
+/* estilização da img que está dentro da classe topo */
+.topo img {
+  height: 100px;
+  margin: 10px 0 0 10px;
+  /* absolute - a img fica sobre os outros elementos */
+  position: absolute;
+}
+/* estilização da classe menu */
+.menu ul {
+  padding:0px;
+  margin:0px;
+  /* exclui a marcação automática inserida anterior ao título */
+  list-style:none;
+  text-align: center;
+}
+
+.menu ul li { 
+  /* para não exibir os títulos jogandos para outra linha */
+  display: inline;
+  font-size: 30px;
+}
+
+.menu ul li a {
+  color: #111;
+  padding: 5px 30px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom:3px solid #EDEDED;
+}
+/* a:hover passando o mouse por cima de um dos botões, têm-se a estilização */
+.menu ul li a:hover {
+  background-color:#D6D6D6;
+  border-bottom:3px solid #000;
+}
+/* Estilização do classe filmes, que engloba os 3 filmes */
+.filmes {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* article - margem entre cada filme */
+.filmes article {
+  margin: 20px 0;
+}
+
+.filmes article img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.filmes article h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.filmes .borda {
+  padding: 15px;
+  border-style: ridge;
+  border-radius: 0.1em;
+}
+
+.filmes .borda-span {
+  padding: 10px;
+  border-style: groove;
+  text-align: justify;
+  border-radius: 0.3em;
+}
+
+.filmes .botao {
+  padding: 5px 10px;
+  background-color: #686868;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.3em;
+}
+/* projeto 1 */
+.rodape h4 {
+  margin: 0;
+  padding-bottom: 15px;
+  text-align: center;
+}
+/* RESPONSIVIDADE */
+/* quando atingir mais que 880px, aplica-se as diretrizes abaixo */
+@media (min-width: 1024px) {
+  .filmes article {
+    display: inline-table;
+    width: 33%;
+  }
+}
+@media (min-width: 680px) and (max-width: 1024px) {
+  .filmes article {
+    display: inline-table;
+    width: 49%;
+  }
+}
+/* o logo some ao atingir menos de 880 pixels de largura */
+@media (max-width: 880px) {
+  .topo img {
+    display: none;
+  }
+}
